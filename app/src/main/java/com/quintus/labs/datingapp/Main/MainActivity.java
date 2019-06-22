@@ -20,11 +20,9 @@ import android.widget.Toast;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
-import com.quintus.labs.datingapp.Models.*;
 import com.quintus.labs.datingapp.R;
 import com.quintus.labs.datingapp.Utils.PulsatorLayout;
 import com.quintus.labs.datingapp.Utils.TopNavigationViewHelper;
-import com.quintus.labs.datingapp.http.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +49,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 
+
         cardFrame = findViewById(R.id.card_frame);
         moreFrame = findViewById(R.id.more_frame);
         // start pulsator
@@ -60,24 +59,30 @@ public class MainActivity extends Activity {
 
 
         setupTopNavigationView();
-
-
         rowItems = new ArrayList<Cards>();
+        Cards cards = new Cards("1", "Sugar", 3, "https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg", "a beautiful brown dog", "play game", 200);
+        rowItems.add(cards);
+        cards = new Cards("2", "Catty", 9, "https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/177636/544368.jpg?itok=qdIwq-rZ", "a cute Husky", "Dancing", 800);
+        rowItems.add(cards);
+        cards = new Cards("3", "Kawai", 4, "https://tractive.com/static/images/product-images/tratr3g/tractive-gps-3g-dogtracker-dalmatian-dog.jpg", "a cute soptty dog", "wandering", 400);
+        rowItems.add(cards);
+        cards = new Cards("4", "Bandy", 3, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbAGg_850YbBE75JT6elMmZPxTL8fT4UGSVoIgNKc7U_ixmnguQ", "cute dog", "swiming", 1308);
+        rowItems.add(cards);
+        cards = new Cards("5", "Clair", 2, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3kUJU_pXXXqQpiBg_pw37-g0pkok3BJNePj5h0KhtKKVcfoV", "pretty dog ", "play game", 1200);
+        rowItems.add(cards);
+        cards = new Cards("6", "Maven", 1, "https://www.rd.com/wp-content/uploads/2018/04/shutterstock_693756292.jpg", "love sleeping", "Sleeping", 700);
+        rowItems.add(cards);
+        cards = new Cards("7", "Donald trump", 2, "https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg", "boring", "Art", 5000);
+        rowItems.add(cards);
+
+
         // TODO: get available dog or volunteer profiles in the specified timeslot
         // initialize rowItems here!
 
-        // THIS IS A TEST TO GET DOGS WHO LIKE THIS VOLUNTEER! (SO DOGID IS EMPTY STRING!)
-        String DOGID = "";
-        String VOLUNTEERID = "voln1";
-        String time = "2019-06-22-SAT-E";
+        arrayAdapter = new PhotoAdapter(this, R.layout.item, rowItems);
 
-        ObserverOnNextListener<RespFormat> respListener = respFormat -> {
-            rowItems = respFormat.getBody().getElements();
-            arrayAdapter = new PhotoAdapter(this, R.layout.item, rowItems);
-            checkRowItem();
-            updateSwipeCard();
-        };
-        ApiMethods.getLike(new MyObserver<>(this, respListener), DOGID, VOLUNTEERID);
+        checkRowItem();
+        updateSwipeCard();
     }
 
     private void checkRowItem() {
@@ -186,13 +191,13 @@ public class MainActivity extends Activity {
         if (rowItems.size() != 0) {
             Cards card_item = rowItems.get(0);
 
-            String userId = card_item.getId();
+            String userId = card_item.getUserId();
 
             rowItems.remove(0);
             arrayAdapter.notifyDataSetChanged();
 
             Intent btnClick = new Intent(mContext, BtnDislikeActivity.class);
-            btnClick.putExtra("url", ((Cards) card_item).getImg());
+            btnClick.putExtra("url", card_item.getProfileImageUrl());
             startActivity(btnClick);
         }
     }
@@ -201,7 +206,7 @@ public class MainActivity extends Activity {
         if (rowItems.size() != 0) {
             Cards card_item = rowItems.get(0);
 
-            String userId = card_item.getId();
+            String userId = card_item.getUserId();
 
             //check matches
 
@@ -209,7 +214,7 @@ public class MainActivity extends Activity {
             arrayAdapter.notifyDataSetChanged();
 
             Intent btnClick = new Intent(mContext, BtnLikeActivity.class);
-            btnClick.putExtra("url", card_item.getImg());
+            btnClick.putExtra("url", card_item.getProfileImageUrl());
             startActivity(btnClick);
         }
     }

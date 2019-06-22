@@ -69,7 +69,7 @@ public class RoleSelectActivity extends AppCompatActivity {
 
     public void dogloverButtonSelected() {
         preferDoglover = true;
-        dogloverSelectionButton.setBackgroundColor(Color.parseColor("#FF4081"));
+        dogloverSelectionButton.setBackgroundColor(Color.parseColor("#EDB412"));
         dogloverSelectionButton.setAlpha(1.0f);
         dogownerSelectionButton.setAlpha(.5f);
         dogownerSelectionButton.setBackgroundColor(Color.GRAY);
@@ -77,7 +77,7 @@ public class RoleSelectActivity extends AppCompatActivity {
 
     public void dogownerButtonSelected() {
         preferDoglover = false;
-        dogownerSelectionButton.setBackgroundColor(Color.parseColor("#FF4081"));
+        dogownerSelectionButton.setBackgroundColor(Color.parseColor("#EDB412"));
         dogownerSelectionButton.setAlpha(1.0f);
         dogloverSelectionButton.setAlpha(.5f);
         dogloverSelectionButton.setBackgroundColor(Color.GRAY);
@@ -97,12 +97,14 @@ public class RoleSelectActivity extends AppCompatActivity {
         if(preferDoglover){
             Intent intent = new Intent(this, TimeSlelectActivity.class);
             intent.putExtra("id","dog"+email);
+            intent.putExtra("prefer", "dog");
             startActivity(intent);
         }
 
         if(!preferDoglover){
             Intent intent = new Intent(this, TimeSlelectActivity.class);
-            intent.putExtra("id", "person"+email);
+            intent.putExtra("id", "voln"+email);
+            intent.putExtra("prefer", "voln");
             startActivity(intent);
         }
     }

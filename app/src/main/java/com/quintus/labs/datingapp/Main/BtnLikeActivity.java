@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
@@ -36,10 +35,7 @@ public class BtnLikeActivity extends AppCompatActivity {
         like = findViewById(R.id.like);
 
         Intent intent = getIntent();
-        // TODO: get userId from previous activity: MainActivity
-        String USER_ID = "";
-        String DOG_ID = "";
-        String TIME = "2019-06-22-SAT-M";
+
         // TODO: is Line 40-52 necessary?
         String profileUrl = intent.getStringExtra("url");
 
@@ -56,15 +52,6 @@ public class BtnLikeActivity extends AppCompatActivity {
         }
 
         //TODO: create a like record in the database
-        //------------ this is an example as how to use the http request mechanism
-//        ObserverOnNextListener<RespFormat> respListener = respFormat -> {
-//            int result = respFormat.getStatus();
-//            if (result != 200) {
-//                Toast warning = Toast.makeText(this, "Failed to like!", Toast.LENGTH_SHORT);
-//            }
-//        };
-//        ApiMethods.createLikeDog(new MyObserver<>(this, respListener), DOG_ID, USER_ID, TIME);
-
         new Thread(new Runnable() {
             @Override
             public void run() {

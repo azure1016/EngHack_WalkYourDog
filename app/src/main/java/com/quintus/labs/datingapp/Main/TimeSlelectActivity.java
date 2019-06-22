@@ -52,19 +52,20 @@ public class TimeSlelectActivity extends AppCompatActivity {
 
     public void morningChoice(){
         Intent intent = new Intent(this, MainActivity.class);
-        String time = "morning";
+        String time = "2019-06-22-SAT-M";
+
         startActivity(intent);
     }
 
     public void afternoonChoice(){
         Intent intent = new Intent(this, MainActivity.class);
-        String time = "afternoon";
+        String time = "2019-06-22-SAT-A";
         startActivity(intent);
     }
 
     public void nightChoice(){
         Intent intent = new Intent(this, MainActivity.class);
-        String time = "night";
+        String time = "2019-06-22-SAT-N";
         startActivity(intent);
     }
 
