@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/numberOfPagesLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="24dp"
-        android:text="4/5"
-        android:textColor="#747474"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+    <!--<TextView-->
+        <!--android:id="@+id/numberOfPagesLeft"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:layout_marginRight="24dp"-->
+        <!--android:gravity="right"-->
+        <!--android:text="3/5"-->
+        <!--android:textColor="#747474"-->
+        <!--android:textSize="24sp"-->
+        <!--android:textStyle="bold" />-->
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -20,12 +22,14 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_margin="20dp"
+
         android:layout_marginBottom="30dp"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/logo1" />
 
@@ -40,6 +44,7 @@
 
     </RelativeLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,39 +56,59 @@
             android:id="@+id/getStartedTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
-            android:text="When were you born?"
+            android:layout_marginBottom="20dp"
+            android:text="Intrested in:"
             android:textColor="#747474"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <DatePicker
-            android:id="@+id/ageSelectionPicker"
-            style="@style/MyDatePicker"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/getStartedTextView"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="24dp"
-            android:backgroundTint="#ff4081"
-            android:calendarTextColor="#ff4081"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner"
-            android:yearListSelectorColor="@color/colorPrimaryDark" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dogloverSelectionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="#F2C440"
+                android:elevation="24dp"
+                android:text="Dog Lover"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/dogownerSelectionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:layout_weight="1"
+                android:background="#F2C440"
+                android:elevation="24dp"
+                android:text="Dog Owner"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/ageContinueButton"
+            android:id="@+id/preferenceContinueButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ageSelectionPicker"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="24dp"
-            android:background="#ff4081"
-            android:backgroundTint="#EDB412"
+            android:background="#F2C440"
+            android:backgroundTint="#F2C440"
             android:elevation="24dp"
             android:text="Continue"
             android:textColor="@android:color/white"
