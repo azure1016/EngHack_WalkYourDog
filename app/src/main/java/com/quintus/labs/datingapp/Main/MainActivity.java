@@ -61,20 +61,8 @@ public class MainActivity extends Activity {
 
 
         rowItems = new ArrayList<Cards>();
-        Cards cards = new Cards("1", "Sugar", 3, "https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg", "a beautiful brown dog", "play game", 200);
-        rowItems.add(cards);
-        cards = new Cards("2", "Catty", 9, "https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/177636/544368.jpg?itok=qdIwq-rZ", "a cute Husky", "Dancing", 800);
-        rowItems.add(cards);
-        cards = new Cards("3", "Kawai", 4, "https://tractive.com/static/images/product-images/tratr3g/tractive-gps-3g-dogtracker-dalmatian-dog.jpg", "a cute soptty dog", "wandering", 400);
-        rowItems.add(cards);
-        cards = new Cards("4", "Bandy", 3, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrbAGg_850YbBE75JT6elMmZPxTL8fT4UGSVoIgNKc7U_ixmnguQ", "cute dog", "swiming", 1308);
-        rowItems.add(cards);
-        cards = new Cards("5", "Clair", 2, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3kUJU_pXXXqQpiBg_pw37-g0pkok3BJNePj5h0KhtKKVcfoV", "pretty dog ", "play game", 1200);
-        rowItems.add(cards);
-        cards = new Cards("6", "Maven", 1, "https://www.rd.com/wp-content/uploads/2018/04/shutterstock_693756292.jpg", "love sleeping", "Sleeping", 700);
-        rowItems.add(cards);
-        cards = new Cards("7", "Donald trump", 2, "https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg", "boring", "Art", 5000);
-        rowItems.add(cards);
+        // TODO: get available dog or volunteer profiles in the specified timeslot
+        // initialize rowItems here!
 
         arrayAdapter = new PhotoAdapter(this, R.layout.item, rowItems);
 

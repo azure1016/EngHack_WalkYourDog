@@ -1,0 +1,7 @@
+data:
+  config:
+    url: jdbc:mysql://walkmydog.cqw83rhbcuaz.us-west-2.rds.amazonaws.com/walkmydog?autoReconnect=true && useSSL=false
+    username: root
+    password: walkmydog
+    driver: com.mysql.cj.jdbc.Driver
+    maxpoolsize: 10

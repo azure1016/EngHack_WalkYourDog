@@ -84,6 +84,8 @@ public class Matched_Activity extends AppCompatActivity {
     }
 
     private void prepareMatchData() {
+
+        //TODO: prepare Match data from the database
         Users users = new Users("1", "Sugar", 3, "https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg", "a beautiful brown dog", "play game", 200);
         matchList.add(users);
         users = new Users("2", "Catty", 9, "https://www.bluecross.org.uk/sites/default/files/styles/thumbnail_pet/public/pets/177636/544368.jpg?itok=qdIwq-rZ", "a cute Husky", "Dancing", 800);
