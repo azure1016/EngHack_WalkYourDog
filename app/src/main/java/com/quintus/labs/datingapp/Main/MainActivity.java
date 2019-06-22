@@ -20,9 +20,11 @@ import android.widget.Toast;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
+import com.quintus.labs.datingapp.Models.*;
 import com.quintus.labs.datingapp.R;
 import com.quintus.labs.datingapp.Utils.PulsatorLayout;
 import com.quintus.labs.datingapp.Utils.TopNavigationViewHelper;
+import com.quintus.labs.datingapp.http.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,10 +66,18 @@ public class MainActivity extends Activity {
         // TODO: get available dog or volunteer profiles in the specified timeslot
         // initialize rowItems here!
 
-        arrayAdapter = new PhotoAdapter(this, R.layout.item, rowItems);
+        // THIS IS A TEST TO GET DOGS WHO LIKE THIS VOLUNTEER! (SO DOGID IS EMPTY STRING!)
+        String DOGID = "";
+        String VOLUNTEERID = "voln1";
+        String time = "2019-06-22-SAT-E";
 
-        checkRowItem();
-        updateSwipeCard();
+        ObserverOnNextListener<RespFormat> respListener = respFormat -> {
+            rowItems = respFormat.getBody().getElements();
+            arrayAdapter = new PhotoAdapter(this, R.layout.item, rowItems);
+            checkRowItem();
+            updateSwipeCard();
+        };
+        ApiMethods.getLike(new MyObserver<>(this, respListener), DOGID, VOLUNTEERID);
     }
 
     private void checkRowItem() {
@@ -176,13 +186,13 @@ public class MainActivity extends Activity {
         if (rowItems.size() != 0) {
             Cards card_item = rowItems.get(0);
 
-            String userId = card_item.getUserId();
+            String userId = card_item.getId();
 
             rowItems.remove(0);
             arrayAdapter.notifyDataSetChanged();
 
             Intent btnClick = new Intent(mContext, BtnDislikeActivity.class);
-            btnClick.putExtra("url", card_item.getProfileImageUrl());
+            btnClick.putExtra("url", ((Cards) card_item).getImg());
             startActivity(btnClick);
         }
     }
@@ -191,7 +201,7 @@ public class MainActivity extends Activity {
         if (rowItems.size() != 0) {
             Cards card_item = rowItems.get(0);
 
-            String userId = card_item.getUserId();
+            String userId = card_item.getId();
 
             //check matches
 
@@ -199,7 +209,7 @@ public class MainActivity extends Activity {
             arrayAdapter.notifyDataSetChanged();
 
             Intent btnClick = new Intent(mContext, BtnLikeActivity.class);
-            btnClick.putExtra("url", card_item.getProfileImageUrl());
+            btnClick.putExtra("url", card_item.getImg());
             startActivity(btnClick);
         }
     }

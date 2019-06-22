@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.quintus.labs.datingapp.R;
+import com.quintus.labs.datingapp.Models.Cards;
 
 import java.util.List;
 
@@ -41,23 +42,21 @@ public class PhotoAdapter extends ArrayAdapter<Cards> {
         ImageView image = convertView.findViewById(R.id.image);
         ImageButton btnInfo = convertView.findViewById(R.id.checkInfoBeforeMatched);
 
-        name.setText(card_item.getName() + ", " + card_item.getAge());
+        name.setText(card_item.getName());
         btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, ProfileCheckinMain.class);
-                intent.putExtra("name", card_item.getName() + ", " + card_item.getAge());
-                intent.putExtra("photo", card_item.getProfileImageUrl());
-                intent.putExtra("bio", card_item.getBio());
-                intent.putExtra("interest", card_item.getInterest());
-                intent.putExtra("distance", card_item.getDistance());
+                intent.putExtra("name", card_item.getName());
+                intent.putExtra("img", card_item.getImg());
+                intent.putExtra("rating", card_item.getRating());
                 mContext.startActivity(intent);
             }
         });
 
-        name.setText(card_item.getName() + ", " + card_item.getAge());
+        name.setText(card_item.getName());
 
-        switch (card_item.getProfileImageUrl()) {
+        switch (card_item.getImg()) {
             case "defaultFemale":
                 Glide.with(getContext()).load(R.drawable.default_woman).into(image);
                 break;
@@ -65,7 +64,7 @@ public class PhotoAdapter extends ArrayAdapter<Cards> {
                 Glide.with(getContext()).load(R.drawable.default_man).into(image);
                 break;
             default:
-                Glide.with(getContext()).load(card_item.getProfileImageUrl()).into(image);
+                Glide.with(getContext()).load(card_item.getImg()).into(image);
                 break;
         }
 
