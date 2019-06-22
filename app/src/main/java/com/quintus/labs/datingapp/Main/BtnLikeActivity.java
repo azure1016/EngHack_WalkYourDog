@@ -13,6 +13,8 @@ import com.bumptech.glide.Glide;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.quintus.labs.datingapp.R;
 import com.quintus.labs.datingapp.Utils.TopNavigationViewHelper;
+import com.quintus.labs.datingapp.Models.*;
+import com.quintus.labs.datingapp.http.*;
 
 /**
  * Created by Quintus Labs on 19-Dec-2018.
@@ -33,6 +35,8 @@ public class BtnLikeActivity extends AppCompatActivity {
         like = findViewById(R.id.like);
 
         Intent intent = getIntent();
+
+        // TODO: is Line 40-52 necessary?
         String profileUrl = intent.getStringExtra("url");
 
         switch (profileUrl) {
@@ -47,6 +51,7 @@ public class BtnLikeActivity extends AppCompatActivity {
                 break;
         }
 
+        //TODO: create a like record in the database
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -72,4 +77,5 @@ public class BtnLikeActivity extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
     }
+
 }
