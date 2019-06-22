@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.quintus.labs.datingapp.Main.MainActivity;
+import com.quintus.labs.datingapp.Main.RoleSelectActivity;
 import com.quintus.labs.datingapp.R;
 
 /**
@@ -61,7 +62,10 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(mContext, "You must fill out all the fields", Toast.LENGTH_SHORT).show();
                 } else {
 
-                    Intent intent = new Intent(Login.this, MainActivity.class);
+
+                    Intent intent = new Intent(Login.this, RoleSelectActivity.class);
+                    intent.putExtra("email", email);
+                    intent.putExtra("password", password);
                     startActivity(intent);
                 }
             }
