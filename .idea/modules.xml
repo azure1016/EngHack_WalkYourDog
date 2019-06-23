@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EngHack_WalkYourDog.iml" filepath="$PROJECT_DIR$/EngHack_WalkYourDog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WalkdogApp.iml" filepath="$PROJECT_DIR$/WalkdogApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

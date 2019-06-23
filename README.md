@@ -54,3 +54,4 @@ What's more we implemented the swiping card function.
 2. Add a walking map function to our app to ensure the safety of the dog. The walking map will start to track the route and end tracking when a dog lover returns the dog safely.
 3. User rating system
 4. Dog recommendation system(machine learning)
+
