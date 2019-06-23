@@ -1,34 +1,56 @@
-<img src="screen/Love Dating Logo.png" ></img> 
-<br/>
-# DatingApp
-Android app like Tinder.
-<br/>
+## What's the idea? 
+Match with an awesome person who can walk your dog when you don't have time! Or find a dog to light up your day without taking on too many responsibilities!
 
-<img src="screen/screen1.png" ></img> <br/>
-<img src="screen/screen2.png" ></img> <br/>
-<img src="screen/screen3.png" ></img> <br/>
-<img src="screen/screen4.png" ></img> <br/>
 
-## Download
 
-* [LoveDating](https://github.com/quintuslabs/DatingApp/blob/master/lovedating1.0.apk) - Download APK
-<br/>
+## Inspiration
 
-<br/>
-Dating UI kit is used for online meet up with girls and boys . The screen contains more than 30 icons and most of all required elements required to design an application like this.
-The XML and JAVA files contains comments at each and every point for easy understanding.
-Everything was made with a detail oriented style and followed by today's web trends. Clean coded & Layers are well-organized, carefully named, and grouped.
-Change text, colours and graphics, add or place photos.
-Customize every elements as much, or as little as you want.
-Customise elements (easy to edit)
-100% free fonts
-Perfect pixel (high quality design)
-Very clean and cool UI
-Free updates
+Dogs are adorable and amazing! A puppy could be the best gift in our life. However, on one hand, raising a dog means long-term responsibilities, we can’t make the promise easily; on the other hand, sometimes dog owners can't walk their dogs due to some reasons. Wouldn't it be better to find a reliable person to help rather than upset their puppies? 
 
-This awesome multipurpose dating app designed with a strong sense of modern and new UI, UX concepts. The application has been created with Ansdroid Studio. This awesome template app is highly customizable, user and developer friendly which holds high code quality, reflects module based project structure and many more.
+As for people who always dream of owning a dog but haven't got a chance or are not ready to own one. This is a perfect chance to experience the life of having a dog! By helping dog owners to walk their dogs, dog lovers can not only have a fun time but also have a taste of what kind of dogs fit them best. 
 
-By using this template UI app save your 1000% development time. This app presents a lot of layouts (Slider Landing Page, Sign In Page, Multiple Slider Sign Up Page, Swipe Page, Match Page, Gorgeous Chat Page with Giphy Support, User Public Profile, User Own Profile, Edit Profile Page and Settings pages) etc. 
+## What it does
 
-Therefore, this well-organized design concepts template app will help to build your dating app exactly what you’re looking for.
+To solve this problem, we developed an android app. Registered dog owners and dog lovers can choose a time slot and then swipe the users based on their preference.  When a dog owner and a dog lover mutually like each other, they will match. Once they match, they can start a conversation and negotiate details about time and location to walk the dog.
 
+
+## How we built it
+
+Language: JAVA
+
+Tools: Android-Studio, IntelliJ IDEA
+
+Frameworks: Retrofit2, OKhttp, RxJava, Spring-Boot, Mybatis
+
+Database: MySQL
+
+Running environment: Google Cloud Platform
+
+Version Control: Github
+
+First, we discuss how this product looks like, including requirement analysis, and UI design. The requirement defines what we should implememnt and how components works. We uses yellow in the main theme which makes people feel energetic. 
+
+According to software architecture, we seperate the front and rear ends which makes code orgnization clear and easy to read. The back-end runs with spring-boot and provides a serise of RESTful APIs. 
+
+## Challenges we ran into
+
+Inefficient team member communication. Each team member had different understandings of this project. Each part was built on individual perspective. We should've communicated with each other and exchanged ideas more frequently during the hackthon, so that we could have the same perspective and accomplished more functions in one day.
+
+
+
+## Accomplishments that we're proud of
+We can successfully run our code and operate our andriod app using a virtual device. We built a login/ register layout, time selection function and user communication layout. 
+What's more we implemented the swiping card function.
+
+
+## What we learned
+1. Using Andriod Studio to build UI layout.
+2. How to build an andriod app as a beginner.
+3. How to deploy an andriod app on Google Cloud platform。
+4. Better understanding of andriod development.
+
+## What's next for Walk Your Dog
+1. View users based on location.
+2. Add a walking map function to our app to ensure the safety of the dog. The walking map will start to track the route and end tracking when a dog lover returns the dog safely.
+3. User rating system
+4. Dog recommendation system(machine learning)
