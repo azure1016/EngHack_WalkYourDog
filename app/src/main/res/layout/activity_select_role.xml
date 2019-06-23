@@ -33,7 +33,7 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/logo1" />
 
-        <com.quintus.labs.datingapp.customfonts.MyTextView_GreatVibes_Regular
+        <com.quintus.labs.walkdog.customfonts.MyTextView_GreatVibes_Regular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -59,7 +59,7 @@
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="20dp"
-            android:text="Intrested in:"
+            android:text="you want to find:"
             android:textColor="#747474"
             android:textSize="24sp"
             android:textStyle="bold" />

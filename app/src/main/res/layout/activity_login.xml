@@ -34,7 +34,7 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/logo1" />
 
-                <com.quintus.labs.datingapp.customfonts.MyTextView_GreatVibes_Regular
+                <com.quintus.labs.walkdog.customfonts.MyTextView_GreatVibes_Regular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"

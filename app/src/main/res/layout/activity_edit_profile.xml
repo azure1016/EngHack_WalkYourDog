@@ -315,7 +315,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.quintus.labs.walkdog.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -336,7 +336,7 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/colorAccent" />
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.quintus.labs.walkdog.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -358,7 +358,7 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/colorAccent" />
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.quintus.labs.walkdog.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -380,7 +380,7 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/colorAccent" />
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.quintus.labs.walkdog.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -402,7 +402,7 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/colorAccent" />
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.quintus.labs.walkdog.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -458,7 +458,7 @@
                             android:visibility="visible" />
                     </RelativeLayout>
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.quintus.labs.walkdog.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_5dp"

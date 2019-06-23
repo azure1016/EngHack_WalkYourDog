@@ -51,7 +51,7 @@
                         android:gravity="end"
                         android:paddingEnd="10dp"
                         android:paddingRight="10dp"
-                        android:text="Women"
+                        android:text="dogowner"
                         android:textColor="@color/black"
                         android:textSize="16dp" />
 
@@ -63,7 +63,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
-                            android:text="Men"
+                            android:text="dogLover"
                             android:textSize="18dp" />
 
                         <android.support.v7.widget.SwitchCompat
@@ -89,7 +89,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
-                            android:text="Women"
+                            android:text="Dogowner"
                             android:textSize="18dp" />
 
                         <android.support.v7.widget.SwitchCompat
