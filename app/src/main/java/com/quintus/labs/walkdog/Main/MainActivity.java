@@ -256,6 +256,8 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
+        Intent intent = new Intent(this, RoleSelectActivity.class);
+        startActivity(intent);
 
     }
 
